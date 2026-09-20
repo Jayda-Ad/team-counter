@@ -1,17 +1,37 @@
-# team_counter
+# Team Counter
 
-A new Flutter project.
+A Flutter app for tracking scores between two teams. Each team has its own side with a live score display and a +1 button, and the colors change dynamically based on who's winning.
 
-## Getting Started
+## Features
+- **Two-team scoreboard** — Team A on the left, Team B on the right
+- **Live scoring** — tap "+1" under each team to increment their score
+- **Dynamic colors** — each team's panel changes color based on whether they're winning, losing, or tied
+  - 🟢 Green = winning
+  - 🔴 Red = losing
+  - 🟡 Yellow = tied
+- **Reset button** — resets both scores back to 0
+- **Clean Material UI** — rounded buttons, centered layout, a divider that also changes color with the score state
 
-This project is a starting point for a Flutter application.
+## Tech Stack
+- Flutter
+- Dart
+- Material Design widgets
 
-A few resources to get you started if this is your first Flutter project:
+## How It Works
+- `Counter` is a `StatefulWidget` that holds two integer scores (`scoreA` and `scoreB`)
+- Helper methods (`getTeamColor`, `getDividerColor`) return a color based on which score is higher
+- Pressing "+1" calls `setState` to increment the score, which triggers a rebuild and updates the colors instantly
+- The "Reset" button in the bottom bar sets both scores back to 0
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## How to Run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Prerequisites:** Flutter SDK installed ([install guide](https://docs.flutter.dev/get-started/install))
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   flutter pub get
+3. Run the app:
+   ```bash
+   flutter run
+   
