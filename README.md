@@ -2,6 +2,8 @@
 
 A Flutter app for tracking scores between two teams. Each team has its own side with a live score display and a +1 button, and the colors change dynamically based on who's winning.
 
+![demo](./team-counter.gif)
+
 ## Features
 - **Two-team scoreboard** — Team A on the left, Team B on the right
 - **Live scoring** — tap "+1" under each team to increment their score
